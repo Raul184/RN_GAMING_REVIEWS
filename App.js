@@ -1,5 +1,5 @@
 import React , {useEffect} from 'react';
-import HomePage from './screens/home'
+import Navigator from './routes/homeStack'
 import * as Font from 'expo-font'
 export default function App() {
   useEffect(() => Font.loadAsync({
@@ -8,7 +8,7 @@ export default function App() {
   })
   ,[])
   return (
-    <HomePage />
+    <Navigator />
   );
 }
 
