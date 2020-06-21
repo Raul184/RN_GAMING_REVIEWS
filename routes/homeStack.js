@@ -9,18 +9,12 @@ const screens = {
     screen: Home,
     navigationOptions: {
       title: 'GaminZone'
-      // headerStyle: {
-      //   backgroundColor: '#cee'
-      // }
-    }
+    },
   },
   ReviewDetails: {
     screen: ReviewDetails,
     navigationOptions: {
       title: 'Details'
-      // headerStyle: {
-      //   backgroundColor: '#cee'
-      // }
     }
   }
 }

@@ -1,5 +1,5 @@
 import React , {useEffect} from 'react';
-import Navigator from './routes/homeStack'
+import Navigator from './routes/drawer'
 import * as Font from 'expo-font'
 export default function App() {
   useEffect(() => Font.loadAsync({
