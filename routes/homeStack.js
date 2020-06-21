@@ -2,14 +2,18 @@ import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 import Home from '../screens/home';
 import ReviewDetails from '../screens/reviewDetails';
+import Header from '../shared/Header';
+import React from 'react';
 
 const screens = {
   // default screen
   Home: {
     screen: Home,
-    navigationOptions: {
-      title: 'GaminZone'
-    },
+    navigationOptions: ({navigation}) => {
+      return {
+        headerTitle: () => <Header navigation={navigation} title='Gaming_Zone'/>
+      }
+    }
   },
   ReviewDetails: {
     screen: ReviewDetails,

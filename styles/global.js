@@ -11,7 +11,7 @@ export const stylesGlobal = StyleSheet.create({
     fontSize:18,
     color:'#333'
   },
-  paragraph: {
+  paragraph:{
     marginVertical:8,
     lineHeight:20
   }
