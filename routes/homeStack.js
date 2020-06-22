@@ -28,11 +28,6 @@ const HomeStack = createStackNavigator(screens,{
   defaultNavigationOptions:{
     headerStyle: {
       headerTintColor:'#444',
-      backgroundColor: '#cee',
-      height:60,
-      flexDirecion:'row',
-      alignItems:'center',
-      justifyContent:'space-evenly'
     }
   }
 });

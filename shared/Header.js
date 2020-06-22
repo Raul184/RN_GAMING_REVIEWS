@@ -1,22 +1,25 @@
 import React from 'react'
-import {Text,View,StyleSheet,Image} from 'react-native'
+import {Text,View,StyleSheet,Image,ImageBackground} from 'react-native'
 import {MaterialIcons} from '@expo/vector-icons'
 
 const Header = ({navigation , title}) => {
   const toogleMenu = () => {
     navigation.openDrawer()
   }
-  return <View style={styles.customHeader}>
-    <MaterialIcons name='menu'
-      size={28}
-      onPress={toogleMenu}
-      style={styles.icon}
-    />
-    <View style={styles.headerTitle}>
-      <Image source={require('../assets/heart_logo.png')} style={styles.headerImg}/>
-      <Text style={styles.customText}>{title}</Text>
-    </View>
-  </View>
+  return <ImageBackground 
+      source={require('../assets/game_bg.png')} 
+      style={styles.customHeader}
+    >
+      <MaterialIcons name='menu'
+        size={28}
+        onPress={toogleMenu}
+        style={styles.icon}
+      />
+      <View style={styles.headerTitle}>
+        <Image source={require('../assets/heart_logo.png')} style={styles.headerImg}/>
+        <Text style={styles.customText}>{title}</Text>
+      </View>
+  </ImageBackground>
 }
 
 
@@ -26,7 +29,8 @@ const styles = StyleSheet.create({
     height:'100%',
     flexDirecion:'row',
     alignItems:'center',
-    justifyContent:'center'
+    justifyContent:'center',
+    padding:18
   },
   icon:{
     position:'absolute',
