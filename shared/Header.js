@@ -1,5 +1,5 @@
 import React from 'react'
-import {Text,View,StyleSheet} from 'react-native'
+import {Text,View,StyleSheet,Image} from 'react-native'
 import {MaterialIcons} from '@expo/vector-icons'
 
 const Header = ({navigation , title}) => {
@@ -12,7 +12,8 @@ const Header = ({navigation , title}) => {
       onPress={toogleMenu}
       style={styles.icon}
     />
-    <View>
+    <View style={styles.headerTitle}>
+      <Image source={require('../assets/heart_logo.png')} style={styles.headerImg}/>
       <Text style={styles.customText}>{title}</Text>
     </View>
   </View>
@@ -30,6 +31,15 @@ const styles = StyleSheet.create({
   icon:{
     position:'absolute',
     left:8
+  },
+  headerTitle:{
+    flexDirection:'row'
+  },
+  headerImg:{
+    width:26,
+    height:26,
+    marginRight:8,
+    marginLeft:8
   },
   customText:{
     fontWeight:'bold',

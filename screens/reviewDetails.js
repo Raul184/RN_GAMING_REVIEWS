@@ -12,7 +12,7 @@ const ReviewDetails = ({navigation}) => {
         <Text>{navigation.getParam('body')}</Text>
         <View style={styles.ratings}>
           <Text>Rating:</Text>
-          <Image source={images.ratings[rating]}/>
+          <Image source={images.ratings[rating]} style={styles.png}/>
         </View>
       </Card>
     </View>
@@ -26,7 +26,14 @@ const styles = StyleSheet.create({
     paddingTop:16,
     marginTop:16,
     borderTopWidth:1,
-    borderTopColor:'#eee'
+    borderTopColor:'#eee',
+    padding:4,
+    margin:2
+  },
+  png:{
+    position:'relative',
+    width:120,
+    height:30,
   }
 })
 export default ReviewDetails;
