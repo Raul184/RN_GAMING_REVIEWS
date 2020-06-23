@@ -6,6 +6,7 @@ export default function App() {
       'nunito-regular': require('./assets/fonts/Nunito-Regular.ttf'),
       'nunito-bold': require('./assets/fonts/Nunito-Bold.ttf')
   })
+  //eslint-disable-next-line
   ,[])
   return (
     <Navigator />

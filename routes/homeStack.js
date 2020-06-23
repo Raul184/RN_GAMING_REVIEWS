@@ -24,12 +24,6 @@ const screens = {
 }
 
 // Stack Navigation
-const HomeStack = createStackNavigator(screens,{
-  defaultNavigationOptions:{
-    headerStyle: {
-      headerTintColor:'#444',
-    }
-  }
-});
+const HomeStack = createStackNavigator(screens);
 
 export default createAppContainer(HomeStack);
