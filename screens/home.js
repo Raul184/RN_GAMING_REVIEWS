@@ -1,10 +1,11 @@
 import React from 'react'
-import {View,Text,FlatList,TouchableOpacity,Modal,StyleSheet} from 'react-native'
+import {View,Text,FlatList,TouchableOpacity,Modal,StyleSheet,TouchableWithoutFeedback,Keyboard} from 'react-native'
 import {stylesGlobal} from '../styles/global.js';
 import { useState } from 'react';
 import {MaterialIcons} from '@expo/vector-icons'
 import Card from '../shared/Card';
 import ReviewForm from './reviewForm'
+
 const Home = ({navigation}) => {
   const [toogleModal, setToogle] = useState(false)
   const [reviews , setReviews] = useState([
@@ -12,18 +13,27 @@ const Home = ({navigation}) => {
     {title: 'Pokemon', rating:4, body:'Lorem ipsum dolor sit amet.', key:'2'},
     {title: 'Final Fantasy', rating:3, body:'Lorem ipsum dolor sit amet.', key:'3'}
   ])
+
+  const addReview = review => {
+    review.key = Math.random().toString()
+    setReviews( prevState => [ ...prevState , review ])
+
+    setToogle(false)
+  }
   return (
     <View style={stylesGlobal.container}>
       <Modal visible={toogleModal} animationType='slide'>
-        <View style={stylesGlobal.modalContent}>
-          <MaterialIcons 
-          name='close' 
-          size={24}
-          onPress={() => setToogle(true)} 
-          style={{...styles.add,...styles.close}}
-          />
-          <ReviewForm />
-        </View>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+          <View style={stylesGlobal.modalContent}>
+            <MaterialIcons 
+            name='close' 
+            size={24}
+            onPress={() => setToogle(true)} 
+            style={{...styles.add,...styles.close}}
+            />
+            <ReviewForm addReview={addReview}/>
+          </View>
+        </TouchableWithoutFeedback>
       </Modal>
       <MaterialIcons 
         name='add' 
