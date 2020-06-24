@@ -2,9 +2,9 @@ import React from 'react'
 import {View,Text,FlatList,TouchableOpacity,Modal,StyleSheet} from 'react-native'
 import {stylesGlobal} from '../styles/global.js';
 import { useState } from 'react';
-import Card from '../shared/Card';
 import {MaterialIcons} from '@expo/vector-icons'
-
+import Card from '../shared/Card';
+import ReviewForm from './reviewForm'
 const Home = ({navigation}) => {
   const [toogleModal, setToogle] = useState(false)
   const [reviews , setReviews] = useState([
@@ -22,7 +22,7 @@ const Home = ({navigation}) => {
           onPress={() => setToogle(true)} 
           style={{...styles.add,...styles.close}}
           />
-          <Text>Hello World</Text>
+          <ReviewForm />
         </View>
       </Modal>
       <MaterialIcons 
