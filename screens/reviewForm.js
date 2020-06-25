@@ -30,20 +30,32 @@ const ReviewForm = ({addReview}) => {
             placeholder={'title'}
             onChangeText={props.handleChange('title')}
             value={props.values.title}
+            onBlur={props.handleBlur('title')}
           />
+          <Text style={stylesGlobal.errorText}>
+            {props.touched.title && props.errors.title}
+          </Text>
           <TextInput
             style={stylesGlobal.input}
             placeholder={'review'}
             onChangeText={props.handleChange('body')}
             value={props.values.body}
+            onBlur={props.handleBlur('body')}
           />
+          <Text style={stylesGlobal.errorText}>
+            {props.touched.body && props.errors.body}
+          </Text>
           <TextInput
             style={stylesGlobal.input}
             placeholder={'rating 1-5'}
             onChangeText={props.handleChange('rating')}
             value={props.values.rating}
             keyboardType='numeric'
+            onBlur={props.handleBlur('rating')}
           />
+          <Text style={stylesGlobal.errorText}>
+            {props.touched.rating && props.errors.rating}
+          </Text>
           <Button title='Submit' color='maroon' onPress={props.handleSubmit}/>
         </View>
       }</Formik>
