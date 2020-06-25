@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   customHeader:{
     width:'100%',
     height:'100%',
-    flexDirecion:'row',
+    flexDirection:'row',
     alignItems:'center',
     justifyContent:'center',
     padding:18

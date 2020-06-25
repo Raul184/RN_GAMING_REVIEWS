@@ -12,8 +12,7 @@ const FlatButton = ({text,onPress}) => <TouchableOpacity onPress={onPress}>
 const styles = StyleSheet.create({
   btn:{
     borderRadius:8,
-    paddingVertical:14,
-    paddingHorizontal:10,
+    paddingVertical:26,
     backgroundColor:'#f01d71'
   },
   btnText:{

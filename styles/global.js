@@ -1,13 +1,13 @@
 import {StyleSheet} from 'react-native';
 
-export const stylesGlobal = StyleSheet.create({
+export const globalStyles = StyleSheet.create({
   container:{
     flex:1,
     padding:20,
     position:'relative'
   },
   headings: {
-    fontFamily:'nunito-bold',
+    fontFamily:'monospace',
     fontSize:18,
     color:'#333'
   },
@@ -16,19 +16,23 @@ export const stylesGlobal = StyleSheet.create({
     lineHeight:20
   },
   input:{
+    fontFamily:'monospace',
+    fontSize:10,
     borderWidth:1,
     borderColor:'#ddd',
     padding:10,
     marginVertical:5,
     fontSize:18,
-    borderRadius:6
+    borderRadius:6,
   },
   errorText:{
     color:'crimson',
     fontWeight:'bold',
     marginBottom:10,
     marginTop:6,
-    textAlign:'center'
+    textAlign:'center',
+    fontFamily:'monospace',
+    fontSize:18,
   }
 })
 
